@@ -1,6 +1,7 @@
+import { app } from "./firebase.js";
 
-console.log("Wamumbi Supermarket is connected!");
+console.log("Firebase connected successfully!", app);
 
 document.addEventListener("DOMContentLoaded", () => {
-  alert("JavaScript is working!");
+  alert("Firebase is connected!");
 });
