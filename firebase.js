@@ -3,7 +3,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.15.0/firebas
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "AIzaSyD0GvhWPCF4t3J5aDKky39D_kcc7hMpLWc",
   authDomain: "wamumbi-supermarket.firebaseapp.com",
   projectId: "wamumbi-supermarket",
   storageBucket: "wamumbi-supermarket.firebasestorage.app",
