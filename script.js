@@ -1,7 +1,20 @@
-import { app } from "./firebase.js";
+import { db } from "./firebase.js";
+import { doc, getDoc } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
-console.log("Firebase connected successfully!", app);
+async function loadMessage() {
+  try {
+    const docRef = doc(db, "test", "welcome");
+    const docSnap = await getDoc(docRef);
 
-document.addEventListener("DOMContentLoaded", () => {
-  alert("Firebase is connected!");
-});
+    if (docSnap.exists()) {
+      alert(docSnap.data().message);
+    } else {
+      alert("Document not found!");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error connecting to Firestore.");
+  }
+}
+
+loadMessage();
